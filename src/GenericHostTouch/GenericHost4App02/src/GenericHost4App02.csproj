@@ -9,4 +9,8 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\GenericHost4Lib01\src\GenericHost4Lib01.csproj" />
+  </ItemGroup>
+
 </Project>

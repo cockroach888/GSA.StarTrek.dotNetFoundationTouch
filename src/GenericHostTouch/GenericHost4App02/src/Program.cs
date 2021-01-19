@@ -1,8 +1,6 @@
+using GenericHost4Lib01;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace GenericHost4App02
 {
@@ -12,12 +10,9 @@ namespace GenericHost4App02
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static async Task Main(string[] args)
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
+            await new GenericHostSample().Run(args);
         }
     }
 }
