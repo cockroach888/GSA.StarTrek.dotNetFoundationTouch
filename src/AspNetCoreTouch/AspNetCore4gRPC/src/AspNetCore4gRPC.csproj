@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>AspNetCore4gRPC.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
