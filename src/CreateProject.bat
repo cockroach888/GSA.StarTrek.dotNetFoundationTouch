@@ -1,41 +1,53 @@
-[TOC]
+@echo off
+@title Ê¹ÓÃ dotnet cli ×Ô¶¯´´½¨½â¾ö·½°¸ºÍ¸÷ÏîÄ¿
 
-# å„ä¸ªå·¥ç¨‹çš„æºæ–‡ä»¶ç›®å½•
+set basedir="%~dp0"
+set basedir
+cd /d %basedir%
 
-- è§£å†³æ–¹æ¡ˆ
-```
+
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- ´´½¨½â¾ö·½°¸ ----------
 dotnet new sln -n GSA2TENET4StarTrek.dotNetFoundationTouch
-```
 
-- æŽ§åˆ¶å°æµ‹è¯•åº”ç”¨ç¨‹åº
-```
+@echo\&echo  ---------- ´´½¨¿ØÖÆÌ¨²âÊÔÓ¦ÓÃ³ÌÐò ----------
 dotnet new console -lang "C#" -f net5.0 -n DebuggerOfConsoleAPP -o DebuggerOfConsoleAPP/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add --in-root DebuggerOfConsoleAPP/src
-```
 
-- çª—ä½“æµ‹è¯•åº”ç”¨ç¨‹åº
-```
+@echo\&echo  ---------- ´°Ìå²âÊÔÓ¦ÓÃ³ÌÐò ----------
 dotnet new winforms -lang "C#" -f net5.0 -n DebuggerOfFormAPP -o DebuggerOfFormAPP/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add --in-root DebuggerOfFormAPP/src
-```
 
-- WebView2Touch
-```
+
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- WebView2Touch ----------
 dotnet new winforms -lang "C#" -f net5.0 -n WebView4App01 -o WebView2Touch/WebView4App01/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s WebView2Touch WebView2Touch/WebView4App01/src
-```
 
-- DotNetBarTouch
-```
+
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- DotNetBarTouch ----------
 dotnet new winforms -lang "C#" -f net5.0 -n DotNetBar4App01 -o DotNetBarTouch/DotNetBar4App01/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s DotNetBarTouch DotNetBarTouch/DotNetBar4App01/src
 
 dotnet new winforms -lang "C#" -f net5.0 -n DotNetBar4App02 -o DotNetBarTouch/DotNetBar4App02/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s DotNetBarTouch DotNetBarTouch/DotNetBar4App02/src
-```
 
-- AspNetCoreTouch
-```
+
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- AspNetCoreTouch ----------
 dotnet new web -lang "C#" -f net5.0 --exclude-launch-settings --no-https -n AspNetCore4Empty -o AspNetCoreTouch/AspNetCore4Empty/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s AspNetCoreTouch AspNetCoreTouch/AspNetCore4Empty/src
 
@@ -50,10 +62,13 @@ dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s AspNetCoreTouch A
 
 dotnet new grpc -lang "C#" -F net5.0 --exclude-launch-settings -n AspNetCore4gRPC -o AspNetCoreTouch/AspNetCore4gRPC/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s AspNetCoreTouch AspNetCoreTouch/AspNetCore4gRPC/src
-```
 
-- GenericHostTouch
-```
+
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- GenericHostTouch ----------
 dotnet new console -lang "C#" -f net5.0 -n GenericHost4App01 -o GenericHostTouch/GenericHost4App01/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s GenericHostTouch GenericHostTouch/GenericHost4App01/src
 
@@ -62,20 +77,42 @@ dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s GenericHostTouch 
 
 dotnet new classlib -lang "C#" -f net5.0 -n GenericHost4Lib01 -o GenericHostTouch/GenericHost4Lib01/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s GenericHostTouch GenericHostTouch/GenericHost4Lib01/src
-```
 
-- SignalRTouch
-```
 
-```
 
-- WPFTouch
-```
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- SignalRTouch ----------
+
+
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- WPFTouch ----------
 dotnet new wpf -lang "C#" -f net5.0 -n WPF4App01 -o WPFTouch/WPF4App01/src
 dotnet sln GSA2TENET4StarTrek.dotNetFoundationTouch.sln add -s WPFTouch WPFTouch/WPF4App01/src
-```
 
-- Temporary
-```
 
-```
+
+@echo.
+@echo.
+@echo.
+@echo\&echo  ---------- Temporary ----------
+
+
+
+
+
+::@echo\&echo ËùÓÐÏîÄ¿×Ô¶¯´´½¨¹¤×÷ÒÑ½áÊø£¬600 Ãëºó½«×Ô¶¯ÍË³ö±¾×Ô¶¯´´½¨³ÌÐò¡£
+::timeout /t 600
+
+@echo.
+@echo.
+@echo.
+@echo.
+@echo.
+@echo\&echo ×Ô¶¯´´½¨ËùÓÐÏîÄ¿Íê±Ï£¬Çë°´ÈÎÒâ¼üÍË³ö¡£
+pause>nul 
+exit
